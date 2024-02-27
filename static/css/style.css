@@ -1,0 +1,191 @@
+/* Global padding adjustments and text color settings */
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: rgb(var(--bs-tertiary-color-rgb));
+}
+
+/* Styling for a horizontal navigation scroller */
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+/* Ensures the nav items are displayed inline and can be scrolled horizontally */
+.nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Highlight styling for the username displayed in the navbar */
+.navbar .navbar-text .username-highlight {
+    color: #ff5722 !important;
+}
+
+/* Carousel margin adjustments and alignment */
+.carousel {
+    margin-bottom: 4rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Carousel caption styling including position and color */
+.carousel-caption {
+
+    bottom: 3rem;
+    z-index: 10;
+    background-color: rgb(61, 57, 57, 0.75);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Ensures captions and headings within the carousel use the correct text color */
+.carousel-caption p {
+    color: #ffffff !important;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.carousel-caption h1 {
+    color: #ffffff !important;
+    font-size: xx-large;
+    font-weight: 800;
+}
+
+/* Sets the background color for carousel items and adjusts their height */
+.carousel-item {
+    background-color: #712cf9;
+    min-height: 20rem;
+    height: 50rem;
+}
+
+/* Centered text and margin adjustments for marketing section columns */
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Paragraph styling within marketing columns */
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+/* Styling for headings within rows, including alignment and margin */
+.row h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.card-main {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 100px !important;
+
+}
+
+.card-img {
+    width: 500px;
+    height: 500px;
+    display: flex;
+
+}
+
+.card-img img {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+}
+
+.card-text {
+    margin-left: 70px !important;
+}
+
+.card-text a {
+    text-decoration: none !important;
+}
+
+/* Divider styling between featurettes */
+.featurette-divider {
+    margin: 5rem 0;
+}
+
+/* Styling for featurette headings, including letter spacing and decoration */
+.featurette-heading,
+.featurette-heading h2,
+.lead {
+    letter-spacing: -.05rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Background, border, and shadow styling for the contact form box */
+.contact-box {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Margin adjustment for the submit button in the contact form */
+.contact-box form button {
+    margin-top: 15px;
+}
+
+/* Styling for the success container, used for displaying success messages */
+.container-success {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Fixed positioning for the footer, ensuring it stays at the bottom */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/* Media queries for responsive adjustments to carousel captions and featurette headings */
+@media (min-width: 40em) {
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
+    }
+}

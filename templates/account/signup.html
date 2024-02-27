@@ -1,0 +1,33 @@
+{% extends "base.html" %}  <!-- Extend base.html template -->
+
+{% load i18n %}  <!-- Load internationalization template tags -->
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}  <!-- Define title for the page -->
+
+{% block content %}  <!-- Define content block -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mt-3 offset-md-2">
+        <h3>{% trans "Sign Up" %}</h3>  <!-- Display sign-up heading -->
+
+        <p>{% blocktrans %}Welcome back to the code|star blog. Do you already have an account? Then please <a class="link"
+            href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</p>  <!-- Display welcome message with sign-in link -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 mt-3 offset-md-2">
+        <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">  <!-- Display sign-up form -->
+          {% csrf_token %}  <!-- CSRF token for form submission -->
+          {{ form.as_p }}  <!-- Display form fields as paragraphs -->
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />  <!-- Hidden field for redirect value -->
+          {% endif %}
+          <button class="btn btn-signup right" type="submit">{% trans "Sign Up" %} &raquo;</button>  <!-- Sign-up button -->
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
