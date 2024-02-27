@@ -189,3 +189,31 @@ footer {
         margin-top: 7rem;
     }
 }
+
+@media (max-width: 1024px) {
+    .card-img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .card-text {
+        margin-left: 50px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-main {
+        flex-direction: column;
+        margin-bottom: 50px !important;
+    }
+
+    .card-img {
+        width: 250px !important;
+        height: 250px !important;
+    }
+
+    .card-text {
+        margin-left: 20px !important;
+        margin-top: 20px;
+    }
+}
