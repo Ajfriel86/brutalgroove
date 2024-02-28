@@ -19,7 +19,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Security settings: SECRET_KEY for cryptographic signing, DEBUG mode setting, and allowed hosts for HTTP requests
 SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = os.environ.get('DEBUG') == 'True'
+DEBUG = 'False'
 
 ALLOWED_HOSTS = [
     'brutalgroovegazette-21582aff96df.herokuapp.com',
