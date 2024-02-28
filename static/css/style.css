@@ -147,30 +147,7 @@ body {
     text-align: center;
 }
 
-/* Margin adjustment for the submit button in the contact form */
-.contact-box form button {
-    margin-top: 15px;
-}
-
-.contact-box form {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.contact-box label {
-    text-align: right;
-    padding-right: 10px;
-}
-
-.contact-box input[type="text"],
-.contact-box input[type="email"],
-.contact-box textarea {
-    width: 100%;
-    box-sizing: border-box;
-}
-
+/* Common form styles */
 .form-group {
     display: flex;
     justify-content: space-between;
@@ -178,17 +155,32 @@ body {
     margin-bottom: 15px;
 }
 
-.form-group label {
-    flex-basis: 20%;
+/* Specific styles for labels in both forms */
+.signup label,
+.contact-box label {
+    display: inline-block;
+    width: 20%;
     text-align: right;
     margin-right: 10px;
 }
 
-.form-group input,
-.form-group textarea,
-.form-group select {
-    flex-basis: 75%;
-    display: block;
+/* Specific styles for input, textarea, and select elements in both forms */
+.signup input,
+.signup textarea,
+.signup select,
+.contact-box input[type="text"],
+.contact-box input[type="email"],
+.contact-box textarea,
+.contact-box select {
+    width: 75%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+/* Adjusting the margin for the submit button in the contact form to match the signup form */
+.contact-box form button,
+.signup form button {
+    margin-top: 15px;
 }
 
 
@@ -232,20 +224,6 @@ form.login input[type="password"] {
 
 form.login button.btn-signup {
     margin-top: 10px;
-}
-
-.signup label {
-    display: inline-block;
-    width: 20%;
-    text-align: right;
-    margin-right: 10px;
-}
-
-.signup input,
-.signup textarea,
-.signup select {
-    width: 75%;
-    display: inline-block;
 }
 
 .btn-signup {
