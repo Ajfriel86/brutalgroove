@@ -72,56 +72,54 @@
                 <hr>
             </div>
         </div>
-        <!-- Section for displaying existing comments and adding new ones -->
-        <div class="row bottom-padding">
-            <div class="col-md-8 card mb-4 mt-3">
-                <h3>Comments:</h3>
-                <div class="card-body">
-
+    <!-- Section for displaying existing comments and adding new ones -->
+    <div class="row bottom-padding">
+        <!-- Column for comments -->
+        <div class="col-md-8 card mb-4 mt-3">
+            <h3>Comments:</h3>
+            <div class="card-body">
                 <!-- Loop through each comment and display it -->
-                    {% for comment in comments %}
-                    <div class="comments" style="padding: 10px;">
-                        <p class="font-weight-bold">
-                            {{ comment.name }}
-                            <span class="text-muted font-weight-normal">
-                                {{ comment.created_on }}
-                            </span> wrote:
-                        </p>
-                        {{ comment.body | linebreaks }}
-                        <!-- Enhanced delete button with a confirmation dialog -->
-                        {% if user.is_authenticated and user == comment.author %}
-                            <form action="{% url 'comment_delete' comment.id %}" method="post" style="display: inline;" onsubmit="return confirmDelete()">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                            </form>
-                        {% endif %}
-                    </div>
-                    {% endfor %}
-
+                {% for comment in comments %}
+                <div class="comments" style="padding: 10px;">
+                    <p class="font-weight-bold">
+                        {{ comment.name }}
+                        <span class="text-muted font-weight-normal">
+                            {{ comment.created_on }}
+                        </span> wrote:
+                    </p>
+                    {{ comment.body | linebreaks }}
+                    <!-- Enhanced delete button with a confirmation dialog -->
+                    {% if user.is_authenticated and user == comment.author %}
+                        <form action="{% url 'comment_delete' comment.id %}" method="post" style="display: inline;" onsubmit="return confirmDelete()">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    {% endif %}
                 </div>
+                {% endfor %}
             </div>
         </div>
-            <!-- Comment form for authenticated users -->
-            <div class="col-md-4 card mb-4  mt-3 ">
-                <div class="card-body">
-                    <!-- For later -->
-                    {% if commented %}
-                    <div class="alert alert-success" role="alert">
-                        Your comment is awaiting approval
-                    </div>
-                    {% else %}
-                    {% if user.is_authenticated %}
 
-                    <h3>Leave a comment:</h3>
-                    <p>Posting as: {{ user.username }}</p>
-                    <form method="post" style="margin-top: 1.3em;">
-                        {{ comment_form | crispy }}
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                    </form>
-                    {% endif %}
-                    {% endif %}
+        <!-- Column for adding a new comment -->
+        <div class="col-md-4 card mb-4 mt-3">
+            <div class="card-body">
+                <!-- Display success message if comment was posted -->
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    Your comment is awaiting approval
                 </div>
+                {% else %}
+                <!-- Comment form for authenticated users -->
+                {% if user.is_authenticated %}
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>
