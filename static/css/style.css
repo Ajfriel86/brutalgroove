@@ -5,6 +5,11 @@ body {
     color: rgb(var(--bs-tertiary-color-rgb));
 }
 
+.nav-link.admin-link:hover {
+    color: #000;
+    background-color: #f8f9fa;
+}
+
 /* Styling for a horizontal navigation scroller */
 .nav-scroller {
     position: relative;
