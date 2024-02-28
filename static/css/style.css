@@ -166,22 +166,46 @@ body {
     margin-bottom: 50px;
 }
 
+.container .row .col-md-8 {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+form.login p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+form.login label {
+    width: 30%;
+    min-width: 70px;
+    margin-right: 10px;
+}
+
+form.login input[type="text"],
+form.login input[type="email"],
+form.login input[type="password"] {
+    width: 70%;
+    flex-grow: 1;
+}
+
+form.login button.btn-signup {
+    margin-top: 10px;
+}
+
 .btn-signup {
     background-color: white;
-    /* White background */
     color: black;
-    /* Black text */
     border: 1px solid black;
-    /* Optional: adds a black border */
     transition: background-color 0.3s, color 0.3s;
-    /* Smooth transition for background and text color */
 }
 
 .btn-signup:hover {
     background-color: black;
-    /* Dark background on hover */
     color: white;
-    /* White text on hover */
 }
 
 /* Fixed positioning for the footer, ensuring it stays at the bottom */
