@@ -1,20 +1,22 @@
+<!-- Inherits from the base template to maintain a consistent layout across the site -->
 {% extends 'base.html' %}
 
-{% load i18n %}
-{% load account socialaccount %}
+{% load i18n %} <!-- Load the internationalization tag library -->
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block head_title %}{% trans "Contact Us" %}{% endblock %} <!-- Sets the title of the page -->
 
+<!-- Content block where the specific page content will be inserted -->
 {% block content %}
 <div class="container">
     <div class="row">
+        <!-- Sets the column width and margin for the contact form -->
         <div class="col-md-8 mt-3 offset-md-2 contact-box">
-            <h2>{% trans "Contact Us" %}</h2>
+            <h2>{% trans "Contact Us" %}</h2> <!-- Heading for the contact form -->
             <form method="post" class="contact-form">
                 {% csrf_token %}
                 {% for field in form %}
                 <div class="form-group">
-                    <label for="{{ field.id_for_label }}" class="control-label">{{ field.label }}</label>
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
                     {{ field }}
                 </div>
                 {% endfor %}
