@@ -74,6 +74,7 @@ class PostDetail(View):
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
+
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
@@ -84,8 +85,6 @@ class PostDetail(View):
             comment.author = request.user
             comment.save()
             return redirect('post_detail', slug=slug)
-        else:
-            comment_form = CommentForm()
 
         return render(
             request,
@@ -93,9 +92,9 @@ class PostDetail(View):
             {
                 "post": post,
                 "comments": comments,
-                "commented": not comment_form.is_valid(),
-                "comment_form": comment_form,
-                "liked": liked
+                "commented": comment_form.is_valid(),
+                "liked": liked,
+                "comment_form": comment_form if not comment_form.is_valid() else CommentForm()
             },
         )
 
