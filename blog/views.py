@@ -156,3 +156,8 @@ def comment_delete(request, comment_id):
         return redirect('post_detail', slug=post_slug)
     else:
         return redirect('post_detail', slug=post_slug)
+
+
+def custom_error_view(request, error_message=None):
+    context = {'error_message': error_message or "An unexpected error occurred."}
+    return render(request, '404.html', context)

@@ -238,6 +238,15 @@ form.login button.btn-signup {
     color: white;
 }
 
+.error-box {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid red;
+    background-color: #ffcccc;
+    width: 80%;
+    border-radius: 5px;
+}
+
 /* Fixed positioning for the footer, ensuring it stays at the bottom */
 footer {
     position: fixed;

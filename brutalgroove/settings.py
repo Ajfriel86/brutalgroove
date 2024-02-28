@@ -101,6 +101,7 @@ TEMPLATES = [
 
 # Remove email confirmation from allauth
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = False
 
 WSGI_APPLICATION = 'brutalgroove.wsgi.application'
 
