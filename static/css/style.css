@@ -152,6 +152,26 @@ body {
     margin-top: 15px;
 }
 
+.contact-box form {
+    margin-top: 20px;
+}
+
+.contact-box label {
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-box input,
+.contact-box textarea,
+.contact-box select,
+.contact-box button {
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+
 /* Styling for the success container, used for displaying success messages */
 .container-success {
     margin: 30px;
