@@ -1,28 +1,26 @@
-<!-- Inherits from the base template to maintain a consistent layout across the site -->
 {% extends 'base.html' %}
 
-{% load i18n %} <!-- Load the internationalization tag library -->
-{% load account socialaccount %} <!-- Load the django-allauth account and social account tag libraries -->
+{% load i18n %}
+{% load account socialaccount %}
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %} <!-- Sets the title of the page, using the trans tag to enable translation -->
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
 
-<!-- Content block where the specific page content will be inserted -->
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <!-- Sets the column width and margin for the contact form -->
-            <div class="col-md-8 mt-3 offset-md-2 contact-box">
-                <h2>{% trans "Contact Us" %}</h2> <!-- Heading for the contact form -->
-                <form method="post">
-                    {% csrf_token %}
-                    <!-- Example label for a form field -->
-                    <label for="id_subject">{% trans "Subject" %}</label>
-                    <!-- Render form fields with appropriate labels -->
-                    {{ form }}
-                    <!-- Submit button for the form -->
-                    <button type="submit" class="btn btn-primary btn-signup">{% trans "Send" %}</button>
-                </form>            
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2 contact-box">
+            <h2>{% trans "Contact Us" %}</h2>
+            <form method="post" class="contact-form">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}" class="control-label">{{ field.label }}</label>
+                    {{ field }}
+                </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary btn-signup">{% trans "Send" %}</button>
+            </form>            
         </div>
     </div>
+</div>
 {% endblock %}
