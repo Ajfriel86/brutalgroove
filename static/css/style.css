@@ -166,6 +166,24 @@ body {
     margin-bottom: 50px;
 }
 
+.btn-signup {
+    background-color: white;
+    /* White background */
+    color: black;
+    /* Black text */
+    border: 1px solid black;
+    /* Optional: adds a black border */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition for background and text color */
+}
+
+.btn-signup:hover {
+    background-color: black;
+    /* Dark background on hover */
+    color: white;
+    /* White text on hover */
+}
+
 /* Fixed positioning for the footer, ensuring it stays at the bottom */
 footer {
     position: fixed;
