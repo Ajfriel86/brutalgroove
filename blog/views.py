@@ -7,7 +7,8 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from allauth.account.views import SignupView
 from .models import Post, HeroImage, Comment  # Import models
-from .forms import CommentForm, ContactForm  # Import forms
+from .forms import CommentForm, ContactForm  # Import form
+from django.contrib import messages
 import logging
 
 # Set up logger for this module
@@ -123,8 +124,9 @@ def contact_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            # Assuming you redirect to 'registration_success' as a placeholder
-            return redirect('registration_success')
+            messages.success(
+                request, 'A member of our team will reach out in due course.')
+            return redirect('contact')
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})
