@@ -15,7 +15,9 @@ logger = logging.getLogger(__name__)
 
 
 class CombinedHomeView(ListView):
-    # ListView to display a list of posts
+    """
+    View to display a list of posts
+    """
     model = Post  # Specifies the model to use
     template_name = "home.html"  # Template file to render
     # Context name that will be used in the template
@@ -40,7 +42,9 @@ class CombinedHomeView(ListView):
 
 
 class PostDetail(View):
-    # View to display a single post detail
+    """
+    View to display a single post detail
+    """
 
     def get(self, request, slug, *args, **kwargs):
         # Handles GET requests
@@ -65,7 +69,9 @@ class PostDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
-        # Handles POST requests, specifically for submitting comments
+        """
+        Handles POST requests, specifically for submitting comments
+        """
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
@@ -96,7 +102,9 @@ class PostDetail(View):
 
 
 class PostLike(View):
-    # View to handle post like functionality
+    """
+    View to handle post like functionality
+    """
 
     def post(self, request, slug, *args, **kwargs):
         # Toggle like status for a post
@@ -110,19 +118,24 @@ class PostLike(View):
 
 
 def contact_view(request):
-    # View for displaying and processing the contact form
+    """
+    View for displaying and processing the contact form
+    """
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('success_url')  # Redirect to a new URL
+            # Assuming you redirect to 'registration_success' as a placeholder
+            return redirect('registration_success')
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})
 
 
 class CustomSignupView(SignupView):
-    # Custom signup view that extends allauth's SignupView
+    """
+    Custom signup view that extends allauth's SignupView
+    """
 
     def form_valid(self, form):
         # Redirect to a success page upon successful signup
@@ -132,7 +145,9 @@ class CustomSignupView(SignupView):
 
 
 def comment_delete(request, comment_id):
-    # View to handle comment deletion
+    """
+    View to handle comment deletion
+    """
     logger.debug(f"Attempting to delete comment with ID: {comment_id}")
     comment = get_object_or_404(Comment, id=comment_id)
     post_slug = comment.post.slug
