@@ -157,6 +157,10 @@ body {
     flex-wrap: wrap;
 }
 
+.bottom-padding {
+    margin-bottom: 50px;
+}
+
 /* Fixed positioning for the footer, ensuring it stays at the bottom */
 footer {
     position: fixed;
