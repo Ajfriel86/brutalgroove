@@ -216,6 +216,20 @@ form.login button.btn-signup {
     margin-top: 10px;
 }
 
+.signup label {
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.signup input,
+.signup textarea,
+.signup select {
+    width: 75%;
+    display: inline-block;
+}
+
 .btn-signup {
     background-color: white;
     color: black;
