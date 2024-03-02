@@ -22,7 +22,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'False'
 
 ALLOWED_HOSTS = [
-    'brutalgroovegazette-21582aff96df.herokuapp.com',
+    'brutalgroove-1df729525c70.herokuapp.com',
     'localhost',
     '127.0.0.1',
 ]
