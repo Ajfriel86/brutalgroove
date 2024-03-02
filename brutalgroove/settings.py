@@ -17,7 +17,8 @@ if os.path.isfile("env.py"):
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
-# Security settings: SECRET_KEY for cryptographic signing, DEBUG mode setting, and allowed hosts for HTTP requests
+# Security settings: SECRET_KEY for cryptographic signing,
+# DEBUG mode setting, and allowed hosts for HTTP requests
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'False'
 
@@ -28,7 +29,8 @@ ALLOWED_HOSTS = [
 ]
 
 
-# Definition of installed apps, including Django's default apps and additional packages like allauth and cloudinary
+# Definition of installed apps, including Django's default apps and
+# additional packages like allauth and cloudinary
 INSTALLED_APPS = [
     # Default Django apps for admin, auth, sessions, etc.
     'django.contrib.admin',
@@ -106,10 +108,8 @@ ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = False
 WSGI_APPLICATION = 'brutalgroove.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-# Database configuration, using dj_database_url for parsing DATABASE_URL from environment variables
+# Database configuration, using dj_database_url
+# for parsing DATABASE_URL from environment variables
 if "DEVELOPMENT" in os.environ:
     print('development environment')
     DATABASES = {
@@ -130,11 +130,11 @@ else:
 #         'ENGINE': 'django.db.backends.postgresql',
 #         'NAME': 'rntxdypg',  # Your database name
 #         'USER': 'rntxdypg',  # Your database username
-#         'PASSWORD': 'hVEtA75OJkYLgPsn5H4KXKHHLwZ34s7t',  # Your database password
-#         'HOST': 'trumpet.db.elephantsql.com',  # Just the hostname here
+#         'PASSWORD': 'hVEtA75OJkYLgPsn5H4KXKHHLwZ34s7t',
+#         'HOST': 'trumpet.db.elephantsql.com',
 #         'PORT': '5432',  # Default PostgreSQL port
 #         'OPTIONS': {
-#             'sslmode': 'require',  # Require SSL mode for the connection
+#             'sslmode': 'require',
 #         },
 #     }
 # }
@@ -151,16 +151,22 @@ if 'test' in sys.argv or 'test_coverage' in sys.argv:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'UserAttributeSimilarityValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME':
+            'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME':
+            'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME':
+            'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
 
@@ -188,7 +194,9 @@ cloudinary.config(
 
 # Static and media files configuration, including URLs and storage backends
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_STORAGE = (
+    'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+)
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
