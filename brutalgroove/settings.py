@@ -15,12 +15,16 @@ if os.path.isfile("env.py"):
 
 # Define the base directory for the project and the directory for templates
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Security settings: SECRET_KEY for cryptographic signing,
 # DEBUG mode setting, and allowed hosts for HTTP requests
 SECRET_KEY = os.environ.get('SECRET_KEY')
+
 DEBUG = 'False'
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = [
     'brutalgroove-1df729525c70.herokuapp.com',
