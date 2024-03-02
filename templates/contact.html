@@ -9,6 +9,12 @@
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2 contact-box">
             <h2>{% trans "Contact Us" %}</h2>
+            <p>If you wish to contact us about advertising on our website, 
+                <br >
+                or if you simple want to reach out to us,
+                <br >
+                please use the contact form below.</p>
+                
             <form method="post" class="contact-form">
                 {% csrf_token %}
                 {% for field in form %}
