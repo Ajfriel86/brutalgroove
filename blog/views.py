@@ -95,7 +95,11 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": comment_form.is_valid(),
                 "liked": liked,
-                "comment_form": comment_form if not comment_form.is_valid() else CommentForm()
+                "comment_form":
+                    comment_form if not
+                    comment_form.is_valid()
+                    else
+                    CommentForm()
             },
         )
 
@@ -106,7 +110,9 @@ class PostLike(View):
     """
 
     def post(self, request, slug, *args, **kwargs):
-        # Toggle like status for a post
+        """
+        Toggle like status for a post
+        """
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
@@ -159,5 +165,11 @@ def comment_delete(request, comment_id):
 
 
 def custom_error_view(request, error_message=None):
-    context = {'error_message': error_message or "An unexpected error occurred."}
+    """
+    View to handle custom error
+    """
+    context = {
+        'error_message': error_message or "An unexpected error occurred."
+    }
+
     return render(request, '404.html', context)
