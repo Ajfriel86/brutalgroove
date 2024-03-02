@@ -1,16 +1,17 @@
-/* Global padding adjustments and text color settings */
+/* Global settings for body padding and text color, enhancing overall readability and visual appeal. */
 body {
     padding-top: 3rem;
     padding-bottom: 3rem;
     color: rgb(var(--bs-tertiary-color-rgb));
 }
 
+/* Enhances the visual feedback on hover for admin links in the navigation bar. */
 .nav-link.admin-link:hover {
     color: #000;
     background-color: #f8f9fa;
 }
 
-/* Styling for a horizontal navigation scroller */
+/* Defines the navigation items, making it easier to navigate a large set of links horizontally. */
 .nav-scroller {
     position: relative;
     z-index: 2;
@@ -18,7 +19,6 @@ body {
     overflow-y: hidden;
 }
 
-/* Ensures the nav items are displayed inline and can be scrolled horizontally */
 .nav-scroller .nav {
     display: flex;
     flex-wrap: nowrap;
@@ -30,12 +30,12 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-/* Highlight styling for the username displayed in the navbar */
+/* Custom style for highlighting the username in the navbar, making it stand out. */
 .navbar .navbar-text .username-highlight {
     color: #ff5722 !important;
 }
 
-/* Carousel margin adjustments and alignment */
+/* Adjusts the carousel's alignment and margin, ensuring it is centered and spaced appropriately. */
 .carousel {
     margin-bottom: 4rem;
     margin: auto;
@@ -43,9 +43,8 @@ body {
     justify-content: center;
 }
 
-/* Carousel caption styling including position and color */
+/* Applies a semi-transparent background to carousel captions, improving text readability against image backgrounds. */
 .carousel-caption {
-
     bottom: 3rem;
     z-index: 10;
     background-color: rgb(61, 57, 57, 0.75);
@@ -55,7 +54,7 @@ body {
     text-align: center;
 }
 
-/* Ensures captions and headings within the carousel use the correct text color */
+/* Ensures the carousel images are responsive, filling the width of the container while maintaining aspect ratio. */
 .carousel-caption p {
     color: #ffffff !important;
     font-size: x-large;
@@ -189,7 +188,6 @@ body {
     margin-top: 15px;
 }
 
-
 /* Styling for the success container, used for displaying success messages */
 .container-success {
     margin: 30px;
@@ -199,28 +197,33 @@ body {
     flex-wrap: wrap;
 }
 
+/* padding for comment section on blog */
 .bottom-padding {
     margin-bottom: 50px;
 }
 
+/* Style t over-ride bootstrap scss files  */
 .container .row .col-md-8 {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 20px;
 }
 
+/* Style for paragraphs on login form */
 form.login p {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
+/* Style for labels on login form */
 form.login label {
     width: 30%;
     min-width: 70px;
     margin-right: 10px;
 }
 
+/* Style for inputs on login form */
 form.login input[type="text"],
 form.login input[type="email"],
 form.login input[type="password"] {
@@ -228,10 +231,12 @@ form.login input[type="password"] {
     flex-grow: 1;
 }
 
+/* Style for buttons on login form */
 form.login button.btn-signup {
     margin-top: 10px;
 }
 
+/* Style for buttons */
 .btn-signup {
     background-color: white;
     color: black;
@@ -239,11 +244,13 @@ form.login button.btn-signup {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Style for buttons */
 .btn-signup:hover {
     background-color: black;
     color: white;
 }
 
+/* Style error page */
 .error-box {
     margin: 20px auto;
     padding: 20px;
@@ -267,25 +274,17 @@ footer {
 }
 
 
-/* Media queries for responsive adjustments to carousel captions and featurette headings */
+/* Media query adjustments ensure the site's layout and typography are optimized for tablet screens. */
 @media (max-width: 1024px) {
 
-    .carousel-caption h1 {
+    /* Adjusts font size and weight of carousel captions for medium-sized devices like tablets. */
+    .carousel-caption h1,
+    .carousel-caption p {
         font-size: medium;
         font-weight: 300;
     }
 
-    .carousel-caption p {
-        font-size: medium;
-        font-weight: 100;
-        margin-bottom: 1.25rem;
-        line-height: 1.4;
-    }
-
-    .featurette-heading {
-        margin-top: 7rem;
-    }
-
+    /* Resizes card images and adjusts the text margin for a balanced layout on tablet screens. */
     .card-img {
         width: 400px;
         height: 400px;
@@ -296,12 +295,14 @@ footer {
     }
 
     .footer {
-        font-size: medium;
+        font-size: small;
     }
 }
 
+/* Further media query adjustments cater to mobile screens, ensuring usability and visual appeal on smaller devices. */
 @media (max-width: 768px) {
 
+    /* Hides carousel captions and adjusts the image height to maintain a compact and focused presentation on mobile. */
     .carousel-caption {
         display: none;
         box-shadow: none;
@@ -309,44 +310,21 @@ footer {
     }
 
     .carousel-item img {
-        height: 400px
+        height: 400px;
     }
 
+    /* Adjusts layout of card elements to a columnar structure for better readability on narrow screens. */
     .card-main {
         flex-direction: column;
         margin-bottom: 50px !important;
     }
 
-    .card-img {
+    .card-img,
+    .card-text {
         width: 250px !important;
         height: 250px !important;
-    }
-
-    .card-text {
         margin-left: 20px !important;
         margin-top: 20px;
-    }
-
-    .footer {
-        font-size: small;
-    }
-}
-
-@media (max-width: 500px) {
-    #myCarousel {
-        height: 200px;
-        overflow: hidden;
-    }
-
-    #myCarousel .carousel-item img {
-        height: 100%;
-        object-fit: cover;
-        width: auto;
-    }
-
-    #myCarousel .carousel-caption {
-        font-size: small;
-        padding: 5px;
     }
 
     .footer {
@@ -354,7 +332,24 @@ footer {
     }
 }
 
+/* Specific adjustments for the carousel height on very small screens, ensuring the carousel remains visually accessible. */
+@media (max-width: 500px) {
+    #myCarousel {
+        height: 200px;
+        /* Adjusts the carousel height to a fixed value for screen widths of 500px or less. */
+    }
 
+    #myCarousel .carousel-item img {
+        height: 100%;
+        /* Ensures the image fills the adjusted carousel height, with object-fit cover for aspect ratio. */
+    }
+
+    .footer {
+        font-size: x-small;
+    }
+}
+
+/* Specific adjustments for the carousel height on very small screens, ensuring the carousel remains visually accessible. */
 @media (max-width: 300px) {
     #myCarousel {
         height: 185px;
