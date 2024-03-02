@@ -10,7 +10,9 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
-    # Display these fields in the admin list view
+    """
+    Display these fields in the admin list view
+    """
     list_display = ('title', 'slug', 'status', 'created_on')
     # Fields to include in the admin search functionality
     search_fields = ['title', 'content']
@@ -26,7 +28,9 @@ class PostAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    # Display these fields in the admin list view
+    """
+    Display these fields in the admin list view
+    """
     list_display = ('name', 'body', 'post', 'created_on', 'approved')
     # Enable filtering by these fields in the admin
     list_filter = ('approved', 'created_on')
@@ -44,7 +48,9 @@ class CommentAdmin(admin.ModelAdmin):
 
 @admin.register(HeroImage)
 class HeroImageAdmin(admin.ModelAdmin):
-    # Display these fields in the admin list view
+    """
+    Display these fields in the admin list view
+    """
     list_display = ('title', 'is_active', 'created_at')
     # Enable filtering by these fields in the admin
     list_filter = ('is_active', 'created_at')
