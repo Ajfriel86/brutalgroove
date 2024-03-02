@@ -4,7 +4,8 @@ from django.contrib import admin
 # Import path for routing and include for including other URLconfs
 from django.urls import path, include
 
-# urlpatterns: A list of URL patterns to route URLs to their corresponding views
+# urlpatterns: A list of URL patterns
+# to route URLs to their corresponding views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("blog.urls")),
