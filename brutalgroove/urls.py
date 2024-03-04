@@ -12,7 +12,6 @@ urlpatterns = [
     path("", include("blog.urls")),
     path('summernote/', include('django_summernote.urls')),
     path("accounts/", include("allauth.urls")),
-    path('custom-error/', views.custom_error_view, name='custom_error_view'),
 ]
 
 handler404 = 'brutalgroove.views.handler404'
