@@ -3,7 +3,7 @@
 **Deployed website: [Link to website](https://brutalgroove-1df729525c70.herokuapp.com/)**
 
 
-![Main image]()
+![Main image](./media/brutal_groove.png)
 
 ## About
 "Brutal Groove" is an independent music blog covering all aspects of underground music. It includes comment sections on each blog article, along with the ability to like or unlike a particular post. 
@@ -109,17 +109,34 @@ A future feature to add is the "Remember me" option while signing into the site.
 
 
 ## Technologies used
-- ### Languages:
-    
-- ### Frameworks and libraries:
 
+### Languages:
++ [Python](https://www.python.org/downloads/release/python-385/): The primary language used to develop the server-side of the website.
++ [JS](https://www.javascript.com/): The primary language used to develop interactive components of the website.
++ [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): The markup language used to create the website.
++ [CSS](https://developer.mozilla.org/en-US/docs/Web/css): The styling language used to style the website.
 
-- ### Databases:
+### Frameworks and libraries:
++ [Django](https://www.djangoproject.com/): Python framework used to create all the logic.
++ [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/): THe style framework used to create the layout of the site.
 
+### Databases:
 
++ [SQLite](https://www.sqlite.org/): was used as a development database.
++ [PostgreSQL](https://www.postgresql.org/): the database used to store all the data.
 
-- ### Other tools:
-
+### Other tools:
++ [Git](https://git-scm.com/): This is the version control system used to manage the code.
++ [Pip3](https://pypi.org/project/pip/): This is the package manager used to install the dependencies.
++ [Gunicorn](https://gunicorn.org/): This is the web server used to run the website.
++ [Psycopg2](https://www.psycopg.org/): This is the database driver used to connect to the database.
++ [Django-allauth](https://django-allauth.readthedocs.io/en/latest/):This is the authentication library used to create the user accounts.
++ [Django-crispy-forms](https://django-cryptography.readthedocs.io/en/latest/): was used to control the rendering behavior of Django forms.
++ [GitHub](https://github.com/): This is used to host the website's source code.
++ [VSCode](https://code.visualstudio.com/): This is the IDE used to develop the website.
++ [Chrome DevTools](https://developer.chrome.com/docs/devtools/open/): This was used to debug the website.
++ [Font Awesome](https://fontawesome.com/): This was used to create the icons used in the website.
++ [Google Fonts](https://fontawesome.com/): This was used to create the icons used in the website.
 ---
 
 ## Features
@@ -158,11 +175,6 @@ A future feature to add is the "Remember me" option while signing into the site.
 
 ### GitHub Project Management
 
-
-
----
-
-## Flowcharts
 
 
 ---
