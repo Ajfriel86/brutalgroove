@@ -7,7 +7,6 @@ body {
     padding-bottom: 3rem;
     color: rgb(var(--bs-tertiary-color-rgb));
     font-family: "Inconsolata", monospace;
-    font-optical-sizing: auto;
     font-style: normal;
     font-weight: 100;
     font-variation-settings:
@@ -314,8 +313,6 @@ footer {
     /* Hides carousel captions and adjusts the image height to maintain a compact and focused presentation on mobile. */
     .carousel-caption {
         display: none;
-        box-shadow: none;
-        background-color: none;
     }
 
     .carousel-item img {
