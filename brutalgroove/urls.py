@@ -3,7 +3,8 @@
 from django.contrib import admin
 # Import path for routing and include for including other URLconfs
 from django.urls import path, include
-from .views import handler400
+from .views import handler404
+
 
 # urlpatterns: A list of URL patterns
 # to route URLs to their corresponding views
@@ -13,5 +14,6 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path("accounts/", include("allauth.urls")),
 ]
+
 
 handler404 = 'brutalgroove.views.handler404'
