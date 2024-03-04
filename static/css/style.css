@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+
 /* Global settings for body padding and text color, enhancing overall readability and visual appeal. */
 body {
     padding-top: 3rem;
     padding-bottom: 3rem;
     color: rgb(var(--bs-tertiary-color-rgb));
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 100;
+    font-variation-settings:
+        "wdth"100;
 }
 
 /* Enhances the visual feedback on hover for admin links in the navigation bar. */
