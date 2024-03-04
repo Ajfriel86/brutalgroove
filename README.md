@@ -6,15 +6,17 @@
 ![Main image]()
 
 ## About
-
+"Brutal Groove" is an independent music blog covering all aspects of underground music. It includes comment sections on each blog article, along with the ability to like or unlike a particular post. 
+As well as there there are role based profiles for staff members and basic users alike. Staff member will have access to the admin panel upon login wheres basic users will not have this functionality. Admin users will also have the option to adjust the carousel images via the back end and attach a caption with each image. There is also a contact form available for any advertisers who to to promote their products or brand through this site.  
 
 ---
 
 ## UX
+The website was created to have an eye catch appeal with an emphasis on the content and user experience. The user can navigate easily throughout the site as well as leave comments, delete their comments, and like / unlike posts. The site is easily scalable with the ease to add content via the admin panel.  
 
 
 ### Target Audience
-
+This website is intended for for users who are interested in rock, metal, or anything underground in terms of music related journalism.  
 
 
 ### User Stories
@@ -42,33 +44,66 @@
 | [#19](https://github.com/Ajfriel86/brutalgroove/issues/19) |** Contact Form - Receive Confirmation:** As a site visitor, I can receive immediate confirmation after submitting the contact form so that I know my message has been successfully sent and will be looked at.|
 
 
-### A Persona Summary of the Customer
+### User Acceptance Criteria
 
+#### General Site Functionality
+ - Homepage Load Time: The homepage of the blog must load within 3 seconds over a standard broadband connection.
+- Responsive Design: The site must be fully responsive, displaying correctly on desktop browsers, tablets, and smartphones, with no horizontal scrolling required.
+Accessibility: The site must meet WCAG 2.1 AA standards to ensure it is accessible to users with disabilities.
 
-### A Persona Summary of Site Admin
+#### User Interface and Experience
+- Navigation: Users must be able to navigate to all sections of the blog from the homepage within two clicks.
+- Content Readability: Blog posts must use a legible font size (minimum 16px for body text) and contrast ratios that comply with WCAG 2.1 AA standards for text and background colors to ensure readability.
 
+- Image Loading and Quality: Images within blog posts must load within 2 seconds and must be optimized for the web without compromising on quality. Images should be displayed at a resolution that looks sharp on both high-density (Retina) and standard displays.
 
----
+- Interactive Elements Feedback: Interactive elements (e.g., buttons, links, comment submission form) must provide immediate visual feedback when interacted with (e.g., hover or focus states) to indicate their functionality..
 
+- Author Profiles: An overview of the authors on the site
+
+- Mobile Menu Usability: On mobile devices, the site must offer an easily accessible and navigable menu to access different sections of the blog without pinching or zooming.
+
+- Error Handling and Messages: The site must display user-friendly error messages for any issues encountered (e.g., failed comment submission, broken links), guiding users on possible next steps.
+
+- Custom 404 Page: The blog must have a custom 404 error page that maintains the site's branding and offers links back to the homepage or popular sections, reducing user frustration on encountering dead links.
+
+- Footer Accessibility: Ensure the footer of the site is accessible from any point within the site without excessive scrolling, containing links to important pages such as About, Contact, and Privacy Policy.
+
+#### Content and Features
+- Blog Post Creation: Authorized users must be able to create, edit, and publish blog posts, including text, images, and embedded media, through a CMS interface.
+ - Comment System: Readers must be able to leave comments on blog posts. New comments should appear immediately after submission pending moderation.
+
+#### Security and Data Protection
+- User Accounts: Users must be able to create, edit, and delete their accounts. Passwords must be encrypted, and the site must offer a password reset feature via email.
+- Data Privacy: The blog must comply with GDPR/CCPA, providing users with a clear privacy policy and options to manage their data.
+
+#### Performance and Scalability
+- Uptime: The blog must maintain 99.9% uptime, excluding scheduled maintenance windows.
+- Scalability: The site must be able to handle spikes in traffic, supporting up to 10,000 concurrent users without significant performance degradation.
+
+#### Testing and Release
+- User Acceptance Testing (UAT): Before launch, a beta version of the site will be made available to a select group of users for feedback. At least 95% of identified issues must be resolved before the official release.
+- Launch Readiness: The site must pass a final UAT with no critical issues remaining. Feedback on usability must be overwhelmingly positive from at least 80% of beta testers.
 
 ---
 
 ## Future Development
 
 #### Down Votes
+A future feature to add is a "down voting" option as seen on site such as reddit. This would enhance the US for user.
 
 
 #### Writes: Backend Model for easier updating of Writes
+A future feature to add is a model that can handle the "Meet the Writers" section where writes pictures and overview of them can easily be updated, changed, or reviewed. 
 
 #### Email Verification
-
+A future feature to add is a more robust email verification mechanism. where user will have to verify their emails by clicking a link that is sent to their email address
 
 #### Forgotten Password Authentication
-
+A future feature to add is the enablement of "Forgotten Passwords." Here a user, or admin staff, could avail of changing their password if they have forgotten it.
 
 #### Enabling "Remember Me"
-
-h
+A future feature to add is the "Remember me" option while signing into the site. This would help enhance the UX for users.
 
 ---
 
