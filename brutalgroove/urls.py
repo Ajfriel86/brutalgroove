@@ -3,6 +3,7 @@
 from django.contrib import admin
 # Import path for routing and include for including other URLconfs
 from django.urls import path, include
+from .views import handler400
 
 # urlpatterns: A list of URL patterns
 # to route URLs to their corresponding views
@@ -11,4 +12,7 @@ urlpatterns = [
     path("", include("blog.urls")),
     path('summernote/', include('django_summernote.urls')),
     path("accounts/", include("allauth.urls")),
+    path('custom-error/', views.custom_error_view, name='custom_error_view'),
 ]
+
+handler404 = 'brutalgroove.views.handler404'
