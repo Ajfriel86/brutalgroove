@@ -3,7 +3,7 @@
 **Deployed website: [Link to website](https://brutalgroove-1df729525c70.herokuapp.com/)**
 
 
-![Main image](./media/brutal_groove.png)
+![Main image](documentation/brutal_groove.png)
 
 ## About
 "Brutal Groove" is an independent music blog covering all aspects of underground music. It includes comment sections on each blog article, along with the ability to like or unlike a particular post. 
@@ -158,15 +158,15 @@ A future feature to add is the "Remember me" option while signing into the site.
 
 ### Wireframes
 #### Home Page
-![Wire Frames](./media/wireframes_1.png)
+![Wire Frames](documentation//wireframes_1.png)
 #### Blog Page
-![Wire Frames](./media/wireframes_2.png)
+![Wire Frames](documentation/wireframes_2.png)
 #### Contact Page
-![Wire Frames](./media/wireframes_3.png)
+![Wire Frames](documentation/wireframes_3.png)
 #### Sign Out Page
-![Wire Frames](./media/wireframes_4.png)
+![Wire Frames](documentation/wireframes_4.png)
 #### Sign Up Page
-![Wire Frames](./media/wireframes_5.png)
+![Wire Frames](documentation/wireframes_5.png)
 
 
 ---
@@ -185,8 +185,8 @@ A future feature to add is the "Remember me" option while signing into the site.
 
 
 ### Data Modeling
-![Data Model](./media/data_model.png)
-![Data Model](./media/data_model_two.png)
+![Data Model](documentation/data_model.png)
+![Data Model](documentation/data_model_two.png)
 
 
 
@@ -195,41 +195,41 @@ A future feature to add is the "Remember me" option while signing into the site.
 
 ### Python
 #### admin.py
-![admin.py](./media/admin_linter.png)
+![admin.py](documentation/admin_linter.png)
 
 #### apps.py 
-![apps.py](./media/apps_linter.png)
+![apps.py](documentation/apps_linter.png)
 
 #### env.py
-![env.py](./media/env_linter.png)
+![env.py](documentation/env_linter.png)
 
 #### forms.py
-![forms.py](./media/forms_linter.png)
+![forms.py](documentation/forms_linter.png)
 
 #### manage.py
-![manage.py](./media/manage_linter.png)
+![manage.py](documentation/manage_linter.png)
 
 #### models.py
-![model.py](./media/models_linter.png)
+![model.py](documentation/models_linter.png)
 
 #### Project urls.py
-![project urls.py](./media/project_urls_linter.png)
+![project urls.py](documentation/project_urls_linter.png)
 
 #### settings.py
-![settings.py](./media/settings_linter.png)
+![settings.py](documentation/settings_linter.png)
 
 #### tests.py
-![tests.py](./media/tests_linter.png)
+![tests.py](documentation/tests_linter.png)
 
 #### views.py
-![views.py](./media/views_linter.png)
+![views.py](documentation/views_linter.png)
 
 ### JavaScript
 
 ### HTML
 
 ### CSS
-![style.css](./media/css_test.png)
+![style.css](documentation/css_test.png)
 ---
 
 
