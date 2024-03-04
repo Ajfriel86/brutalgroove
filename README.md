@@ -40,7 +40,7 @@ This website is intended for for users who are interested in rock, metal, or any
 | [#14](https://github.com/Ajfriel86/brutalgroove/issues/14) |**Carousel Image Activation:** As a site admin, I can select which hero images are active so that only relevant and current images are displayed to visitors.|
 | [#15](https://github.com/Ajfriel86/brutalgroove/issues/15) |**Carousel Editing Captions:** As a site admin, I can edit the captions of existing hero images so that I can correct errors or update the text to stay relevant.|
 | [#16](https://github.com/Ajfriel86/brutalgroove/issues/16) |**Carousel Previewing Changes:** As a site admin, I can remove hero images from the carousel so that I can keep the carousel content fresh and relevant.|
-| [#18](hhttps://github.com/Ajfriel86/brutalgroove/issues/18) |**Contact Form - Submit Inquiry:** As a site visitor, I can submit inquiries through the contact form so that I can get answers to my questions or further information about the services/products offered.|
+|[#18](https://github.com/Ajfriel86/brutalgroove/issues/18) |**Contact Form - Submit Inquiry:** As a site visitor, I can submit inquiries through the contact form so that I can get answers to my questions or further information about the services/products offered.|
 | [#19](https://github.com/Ajfriel86/brutalgroove/issues/19) |** Contact Form - Receive Confirmation:** As a site visitor, I can receive immediate confirmation after submitting the contact form so that I know my message has been successfully sent and will be looked at.|
 
 
@@ -140,6 +140,16 @@ A future feature to add is the "Remember me" option while signing into the site.
 ### Imagery
 
 ### Wireframes
+#### Home Page
+![Wire Frames](./media/wireframes_1.png)
+#### Blog Page
+![Wire Frames](./media/wireframes_2.png)
+#### Contact Page
+![Wire Frames](./media/wireframes_3.png)
+#### Sign Out Page
+![Wire Frames](./media/wireframes_4.png)
+#### Sign Up Page
+![Wire Frames](./media/wireframes_5.png)
 
 
 ---
@@ -163,6 +173,8 @@ A future feature to add is the "Remember me" option while signing into the site.
 
 
 ### Data Modeling
+![Data Model](./media/data_model.png)
+![Data Model](./media/data_model_two.png)
 
 #### Post Model
 
