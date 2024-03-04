@@ -188,23 +188,48 @@ A future feature to add is the "Remember me" option while signing into the site.
 ![Data Model](./media/data_model.png)
 ![Data Model](./media/data_model_two.png)
 
-#### Post Model
-
-
-
-
-#### Comment Model
-
-
-#### Hero Image Model
-
-#### Contact Form Model
 
 
 ---
 ## Testing
 
+### Python
+#### admin.py
+![admin.py](./media/admin_linter.png)
 
+#### apps.py 
+![apps.py](./media/apps_linter.png)
+
+#### env.py
+![env.py](./media/env_linter.png)
+
+#### forms.py
+![forms.py](./media/forms_linter.png)
+
+#### manage.py
+![manage.py](./media/manage_linter.png)
+
+#### models.py
+![model.py](./media/models_linter.png)
+
+#### Project urls.py
+![project urls.py](./media/project_urls_linter.png)
+
+#### settings.py
+![settings.py](./media/settings_linter.png)
+
+#### tests.py
+![tests.py](./media/tests_linter.png)
+
+#### views.py
+![views.py](./media/views_linter.png)
+
+### JavaScript
+
+### HTML
+
+### CSS
+![style.css](./media/css_test.png)
 ---
 
 
