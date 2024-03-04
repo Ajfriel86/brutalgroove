@@ -1,12 +1,11 @@
 from django.shortcuts import render
 
 
-def handler404(request, error_message=None):
-    """
-    View to handle custom error
-    """
-    context = {
-        'error_message': error_message or "An unexpected error occurred."
-    }
+def handler404(request, exception):
+    """ Error Handler 404 - Page Not Found """
+    return render(request, "errors/404.html", status=404)
 
-    return render(request, '404.html', context)
+
+def handler500(request):
+    """ Error Handler 500 - Internal Server Error """
+    return render(request, "errors/500.html", status=500)
