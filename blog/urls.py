@@ -22,5 +22,4 @@ urlpatterns = [
     path('accounts/signup/', CustomSignupView.as_view(), name='account_signup'),
     path('registration/success/', TemplateView.as_view(
         template_name='registration_success.html'), name='registration_success'),
-    path('custom-error/', views.custom_error_view, name='custom_error_view'),
 ]
