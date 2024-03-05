@@ -3,7 +3,7 @@
 from django.contrib import admin
 # Import path for routing and include for including other URLconfs
 from django.urls import path, include
-from .views import handler404
+from .views import handler404, handler500
 
 
 # urlpatterns: A list of URL patterns
@@ -17,3 +17,4 @@ urlpatterns = [
 
 
 handler404 = 'brutalgroove.views.handler404'
+handler500 = 'brutalgroove.views.handler500'
