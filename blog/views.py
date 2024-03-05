@@ -3,14 +3,18 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import ListView
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.contrib.auth.decorators import login_required
 from allauth.account.views import SignupView
 from .models import Post, HeroImage, Comment  # Import models
 from .forms import CommentForm, ContactForm  # Import form
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
+from allauth.account.forms import SignupForm
 import logging
+from django import forms
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Submit, Div
+
 
 # Set up logger for this module
 logger = logging.getLogger(__name__)
@@ -138,16 +142,29 @@ def contact_view(request):
     return render(request, 'contact.html', {'form': form})
 
 
+class CustomSignupForm(SignupForm):
+    """
+    Custom signup form that extends the default allauth 
+    SignupForm with django-crispy-forms layout.
+    """
+    def __init__(self, *args, **kwargs):
+        super(CustomSignupForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper(self)
+        self.helper.layout = Layout(
+            Submit('signup', 'Sign Up', css_class='btn-primary')
+        )
+
+
 class CustomSignupView(SignupView):
     """
     Custom signup view that extends allauth's SignupView
     """
-
+    form_class = CustomSignupForm
+    success_url = reverse_lazy('registration_success') 
+    
     def form_valid(self, form):
-        # Redirect to a success page upon successful signup
         response = super().form_valid(form)
-        # Redirect to the confirmation page after signup
-        return redirect('registration_success')
+        return response
 
 
 def comment_delete(request, comment_id):
