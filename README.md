@@ -145,16 +145,13 @@ A future feature to add is the "Remember me" option while signing into the site.
 
 ---
 ## Design
+The core design for the website was taken from a [Bootstrap template](https://getbootstrap.com/docs/5.0/examples/carousel/)
 
-
-### Color Scheme
-
-
-
+- Here I added my own touches to colours & typography
 
 ### Typography
+The [Google Fonts](https://fontawesome.com/) font Inconsolata was used to display text throughout the site. 
 
-### Imagery
 
 ### Wireframes
 #### Home Page
@@ -174,7 +171,11 @@ A future feature to add is the "Remember me" option while signing into the site.
 ## Agile Methodology
 
 ### GitHub Project Management
+GitHub Project Management was used to manage this project. This was used to create issues with GitHub which related to user stories. These User Stories when then imported into Actions and set as a roadmap. This really helped me stay on to of the project and ensure I had a Minimal Viable Product (MVP) at the end of the project
 
+![Issues](documentation/issues.png)
+
+![Road Map](documentation/roadmap.png)
 
 
 ---
@@ -218,16 +219,35 @@ A future feature to add is the "Remember me" option while signing into the site.
 #### settings.py
 ![settings.py](documentation/settings_linter.png)
 
-#### tests.py
-![tests.py](documentation/tests_linter.png)
-
 #### views.py
 ![views.py](documentation/views_linter.png)
 
+#### tests.py
+![tests.py](documentation/tests_linter.png)
+
+##### Running tests.py
+![Fail](documentation/python_test_fail.png)
+
+##### Removing the issue
+![Remove](documentation/python_test_remove.png)
+
+##### Running tests.py with a pass
+![Pass](documentation/python_test_pass.png)
+
+
 ### JavaScript
 
-### HTML
+My JavaScript files are from bootstrap. This is not custom JavaScript. 
 
+### HTML
+#### Home Page
+![Home Page](documentation/w3_validator_home.png)
+#### Contact Page
+![Contact Page](documentation/w3_validator_contact.png)
+#### Sign Up Page
+![Signup Page](documentation/w3_validator_signup.png)
+#### Log Out Page
+![Log Out Page](documentation/w3_validator_logout.png)
 ### CSS
 ![style.css](documentation/css_test.png)
 ---
@@ -236,6 +256,7 @@ A future feature to add is the "Remember me" option while signing into the site.
 
 ## Deployment
 
+Please see the [DEPLOYMENT.md]()
 
 ---
 
