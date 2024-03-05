@@ -9,6 +9,7 @@ from allauth.account.views import SignupView
 from .models import Post, HeroImage, Comment  # Import models
 from .forms import CommentForm, ContactForm  # Import form
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 import logging
 
 # Set up logger for this module
@@ -84,22 +85,21 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.author = request.user
+            comment.approved = False 
             comment.save()
-            return redirect('post_detail', slug=slug)
-
+            messages.success(request, "Your comment has been submitted and is awaiting approval.")  
+            return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        else:
+            messages.error(request, "There was an error with your comment. Please try again.") 
         return render(
             request,
             "post_detail.html",
             {
                 "post": post,
                 "comments": comments,
-                "commented": comment_form.is_valid(),
+                "commented": False,
                 "liked": liked,
-                "comment_form":
-                    comment_form if not
-                    comment_form.is_valid()
-                    else
-                    CommentForm()
+                "comment_form": comment_form
             },
         )
 
@@ -173,3 +173,20 @@ def custom_error_view(request, error_message=None):
     }
 
     return render(request, '404.html', context)
+
+
+
+@login_required
+def comment_edit(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if request.user == comment.author:
+        if request.method == 'POST':
+            form = CommentForm(request.POST, instance=comment)
+            if form.is_valid():
+                form.save()
+                return redirect('post_detail', slug=comment.post.slug)
+        else:
+            form = CommentForm(instance=comment)
+        return render(request, 'comment_edit.html', {'form': form, 'comment': comment})
+    else:
+        return redirect('post_detail', slug=comment.post.slug)
