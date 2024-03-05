@@ -3,10 +3,9 @@
 <!-- Content block where the specific page content will be inserted -->
 {% block content %}
 <div class="container-success">
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+        <div class="reg-page">
             <p>Thank You For Registering</p>
+            <a href="{% url 'home' %}">Return to home page</a>
         </div>
-    </div>
 </div>
 {% endblock %}
