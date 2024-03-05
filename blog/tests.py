@@ -132,8 +132,6 @@ class ContactViewTest(TestCase):
     """TestCase class to test the contact form submission view."""
 
     def test_contact_form_submission(self):
-        """Test the submission of the contact form
-        and redirect to success page."""
         form_data = {
             'name': 'Test Name',
             'email': 'test@example.com',
@@ -141,6 +139,4 @@ class ContactViewTest(TestCase):
             'message': 'Test Message',
         }
         response = self.client.post(reverse('contact'), data=form_data)
-        # Check redirection to the 'registration_success' URL
-        self.assertRedirects(response, reverse(
-            'registration_success'), status_code=302, target_status_code=200)
+        self.assertRedirects(response, reverse('registration_success'), status_code=302, target_status_code=200)
