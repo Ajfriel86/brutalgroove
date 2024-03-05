@@ -19,7 +19,7 @@
                 {% for hero in hero_images %}
                     <!-- Sets the first slide as active and displays hero images -->
                     <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                        <img src="{{ hero.image.url }}" class="d-block w-100" alt="{{ hero.title }}" style="height: auto; max-height: 50rem;">
+                        <img src="{{ hero.image.url }}" class="d-block w-100" alt="{{ hero.title }}" style="height: auto; max-height: 50rem;" alt="hero image">
                         <!-- Carousel caption with conditional positioning -->
                         <div class="container">
                             <div class="carousel-caption {% if forloop.first %}text-start{% elif forloop.last %}text-end{% else %}text-center{% endif %}">
@@ -46,23 +46,19 @@
             <div class="row">
                 <h1>Meet the writers</h1>
                 <div class="col-lg-4">
-                    <img src="https://res.cloudinary.com/dtyqoklv7/image/upload/v1708430885/older-man-wearing-leather-jacket-260nw-1954449958_f1j6gh.webp" class="bd-placeholder-img rounded-circle" width="140" height="140" aria-label="Placeholder">
-                    </img>
+                    <img src="https://res.cloudinary.com/dtyqoklv7/image/upload/v1708430885/older-man-wearing-leather-jacket-260nw-1954449958_f1j6gh.webp" class="bd-placeholder-img rounded-circle" width="140" height="140" aria-label="Placeholder" alt="blog writer">
                     <h2 class="fw-normal">Peter Dooley</h2>
                     <p>Peter Dooley, a seasoned metal music writer, has carved a niche for himself with his deep dives into the heavy metal genre, unearthing the stories behind the loudest riffs and darkest lyrics. With a career spanning over two decades, Peter has contributed to numerous esteemed music publications, offering insightful reviews, engaging artist interviews, and thought-provoking features.</p>
                     
                 </div>
                 <div class="col-lg-4">
-                    <img src="https://res.cloudinary.com/dtyqoklv7/image/upload/v1708427516/rock-3079352_bl7hb1.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" aria-label="Placeholder">
-                    </img>
+                    <img src="https://res.cloudinary.com/dtyqoklv7/image/upload/v1708427516/rock-3079352_bl7hb1.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" aria-label="Placeholder"alt="blog writer">
                     <h2 class="fw-normal">Frank Frampton</h2>
                     <p>Frank Frampton stands as a distinguished voice in the realm of blues music journalism, with a rich history of exploring the soulful depths and vibrant narratives that define the genre. Over his career, which spans more than twenty years, Frank has penned compelling articles for a variety of prestigious music magazines, specializing in heartfelt interviews, insightful album reviews, and articles that capture the essence of the blues.</p>
                     
                 </div>
                 <div class="col-lg-4">
-                    <img src="https://res.cloudinary.com/dtyqoklv7/image/upload/v1708431067/202311429-portrait-of-a-punk-girl-in-a-leather-jacket-with-pink-hair_o5yrph.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" aria-label="Placeholder"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                    </img>
+                    <img src="https://res.cloudinary.com/dtyqoklv7/image/upload/v1708431067/202311429-portrait-of-a-punk-girl-in-a-leather-jacket-with-pink-hair_o5yrph.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" aria-label="Placeholder"alt="blog writer">
                     <h2 class="fw-normal">Roman Attaman</h2>
                     <p>
                         Roman Attaman, a versatile and dynamic music journalist, has made a name for herself by delving into the eclectic and cutting-edge corners of the music world, from synthwave and rock to punk and breakcore. Her adventurous spirit and keen ear for groundbreaking sounds have led her to uncover and champion the underground scenes and emerging trends that define contemporary music. </p>
@@ -76,7 +72,7 @@
             <div class="card-main">
                 <div class="card-img">
                     <img src=" {{ post.featured_image.url }}" class="featurette-image img-fluid mx-auto" width="500"
-                        height="500" aria-label="Placeholder: 500x500">
+                        height="500" aria-label="Placeholder: 500x500" alt="feature image">
                 </div>
                 <div class = "card-text">
                     <p class="lead">Author: {{ post.author }}</p>
