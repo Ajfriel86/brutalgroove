@@ -95,6 +95,9 @@
                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                         </form>
                     {% endif %}
+                    {% if user.is_authenticated and user == comment.author %}
+                        <a href="{% url 'comment_edit' comment.id %}" class="btn btn-primary btn-sm">Edit</a>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
@@ -104,21 +107,22 @@
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
                 <!-- Display success message if comment was posted -->
-                {% if commented %}
-                <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
-                </div>
-                {% else %}
+                <!-- Display a message informing the user that their comment needs approval -->
+                <!-- Display a message informing the user that their comment needs approval -->
+                {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
                 <!-- Comment form for authenticated users -->
                 {% if user.is_authenticated %}
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
-                {% endif %}
+                    <h3>Leave a comment:</h3>
+                    <p>Posting as: {{ user.username }}</p>
+                    <form method="post" style="margin-top: 1.3em;">
+                        {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    </form>
                 {% endif %}
             </div>
         </div>
