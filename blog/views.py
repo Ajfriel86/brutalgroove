@@ -127,25 +127,24 @@ class PostLike(View):
 
 
 def contact_view(request):
-    """
-    View for displaying and processing the contact form
-    """
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(
                 request, 'A member of our team will reach out in due course.')
-            return redirect('contact')
+            return redirect('registration_success')
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})
+
 
 
 class CustomSignupForm(SignupForm):
     """
     Custom signup form that extends the default allauth 
     SignupForm with django-crispy-forms layout.
+
     """
     def __init__(self, *args, **kwargs):
         super(CustomSignupForm, self).__init__(*args, **kwargs)
