@@ -28,7 +28,7 @@ class CombinedHomeView(ListView):
     template_name = "home.html"  # Template file to render
     # Context name that will be used in the template
     context_object_name = "post_list"
-    paginate_by = 2  # Number of posts per page
+    paginate_by = 3  # Number of posts per page
 
     def get_queryset(self):
         """
