@@ -80,6 +80,7 @@
             <div class="card-body">
                 <!-- Loop through each comment and display it -->
                 {% for comment in comments %}
+                
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
                         {{ comment.author.username }}
@@ -94,9 +95,8 @@
                             {% csrf_token %}
                             <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                         </form>
-                    {% endif %}
-                    {% if user.is_authenticated and user == comment.author %}
-                        <a href="{% url 'comment_edit' comment.id %}" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="javascript:void(0);" onclick="populateEditForm('{{ comment.id }}', '{{ comment.body|escapejs }}')" class="btn btn-primary btn-sm">Edit</a>
+
                     {% endif %}
                 </div>
                 {% endfor %}
@@ -108,7 +108,6 @@
             <div class="card-body">
                 <!-- Display success message if comment was posted -->
                 <!-- Display a message informing the user that their comment needs approval -->
-                <!-- Display a message informing the user that their comment needs approval -->
                 {% if messages %}
                     {% for message in messages %}
                     <div class="alert alert-{{ message.tags }}">{{ message }}</div>
@@ -119,18 +118,31 @@
                     <h3>Leave a comment:</h3>
                     <p>Posting as: {{ user.username }}</p>
                     <form method="post" style="margin-top: 1.3em;">
-                        {{ comment_form | crispy }}
                         {% csrf_token %}
+                        <input type="hidden" name="comment_id" id="comment_id" value="">
+                        {{ comment_form | crispy }}                  
                         <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                     </form>
                 {% endif %}
             </div>
         </div>
     </div>
-    <!-- JavaScript for confirmation of deleting comments -->
+    <!-- JavaScript for confirmation of deleting/editing comments -->
     <script>
     function confirmDelete() {
         return confirm('Are you sure you want to delete this comment?');
+    }
+    function populateEditForm(commentId, commentBody) {
+        document.getElementById('comment_id').value = commentId;
+        
+        let bodyField = document.querySelector('textarea[name="body"]');
+        if (bodyField) {
+            bodyField.value = commentBody;
+        }
+        
+        bodyField.focus();
+        
+        document.getElementById('comment_form').scrollIntoView();
     }
     </script>
 {% endblock content %}
