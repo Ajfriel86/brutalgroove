@@ -10,6 +10,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('', views.CombinedHomeView.as_view(), name='home'),
     path('contact/', contact_view, name='contact'),
+    path('contact/success/', views.contact_success_view, name='contact_success'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
     path('comment/<int:comment_id>/edit/', comment_edit, name='comment_edit'),
