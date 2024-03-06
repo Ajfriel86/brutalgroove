@@ -180,7 +180,7 @@ A future feature to add is the "Remember me" option while signing into the site.
 ## Design
 The core design for the website was taken from a [Bootstrap template](https://getbootstrap.com/docs/5.0/examples/carousel/)
 
-- Here I added my some touches to the colours & typography
+- Here I added some touches to the colours & typography
 
 ### Typography
 The [Google Fonts](https://fontawesome.com/) font Inconsolata was used to display text throughout the site. 
