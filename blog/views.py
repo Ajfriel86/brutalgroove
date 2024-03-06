@@ -28,7 +28,7 @@ class CombinedHomeView(ListView):
     template_name = "home.html"  # Template file to render
     # Context name that will be used in the template
     context_object_name = "post_list"
-    paginate_by = 6  # Number of posts per page
+    paginate_by = 2  # Number of posts per page
 
     def get_queryset(self):
         """
@@ -89,12 +89,14 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.author = request.user
-            comment.approved = False 
+            comment.approved = False
             comment.save()
-            messages.success(request, "Your comment has been submitted and is awaiting approval.")  
+            messages.success(
+                request, "Your comment has been submitted and is awaiting approval.")
             return HttpResponseRedirect(reverse('post_detail', args=[slug]))
         else:
-            messages.error(request, "There was an error with your comment. Please try again.") 
+            messages.error(
+                request, "There was an error with your comment. Please try again.")
         return render(
             request,
             "post_detail.html",
@@ -139,13 +141,13 @@ def contact_view(request):
     return render(request, 'contact.html', {'form': form})
 
 
-
 class CustomSignupForm(SignupForm):
     """
     Custom signup form that extends the default allauth 
     SignupForm with django-crispy-forms layout.
 
     """
+
     def __init__(self, *args, **kwargs):
         super(CustomSignupForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper(self)
@@ -159,8 +161,8 @@ class CustomSignupView(SignupView):
     Custom signup view that extends allauth's SignupView
     """
     form_class = CustomSignupForm
-    success_url = reverse_lazy('registration_success') 
-    
+    success_url = reverse_lazy('registration_success')
+
     def form_valid(self, form):
         response = super().form_valid(form)
         return response
@@ -189,7 +191,6 @@ def custom_error_view(request, error_message=None):
     }
 
     return render(request, '404.html', context)
-
 
 
 @login_required
