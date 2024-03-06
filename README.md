@@ -1,6 +1,6 @@
 # Music Blog Site: Brutal Groove
 
-**Deployed website: [Link to website](https://brutalgroove-1df729525c70.herokuapp.com/  target="_blank")**
+**Deployed website: [Link to website](https://brutalgroove-1df729525c70.herokuapp.com/)**
 
 
 ![Main image](documentation/brutal_groove.png)
