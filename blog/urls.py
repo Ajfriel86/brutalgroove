@@ -1,12 +1,9 @@
 from . import views
 from django.urls import path
 from .views import *
-from .views import CustomSignupView
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
-from .views import comment_delete
-from .views import comment_edit
 
 
 # Define urlpatterns, a list of URL patterns
@@ -16,7 +13,6 @@ urlpatterns = [
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
     path('comment/<int:comment_id>/edit/', comment_edit, name='comment_edit'),
-
     path(
         'comment/<int:comment_id>/delete/', comment_delete, name='comment_delete'
     ),
