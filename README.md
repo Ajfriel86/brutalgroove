@@ -1,22 +1,22 @@
 # Music Blog Site: Brutal Groove
 
-**Deployed website: [Link to website](https://brutalgroove-1df729525c70.herokuapp.com/)**
+**Deployed website: [Link to website](https://brutalgroove-1df729525c70.herokuapp.com/  target="_blank")**
 
 
 ![Main image](documentation/brutal_groove.png)
 
 ## About
 "Brutal Groove" is an independent music blog covering all aspects of underground music. It includes comment sections on each blog article, along with the ability to like or unlike a particular post. 
-As well as there there are role based profiles for staff members and basic users alike. Staff member will have access to the admin panel upon login wheres basic users will not have this functionality. Admin users will also have the option to adjust the carousel images via the back end and attach a caption with each image. There is also a contact form available for any advertisers who to to promote their products or brand through this site.  
+As well as there there are role-based profiles for staff members and basic users alike. Staff members will have access to the admin panel upon login whereas basic users will not have this functionality. Admin users will also have the option to adjust the carousel images via the back end and attach a caption with each image. There is also a contact form available for any advertisers who to to promote their products or brand through this site.  
 
 ---
 
 ## UX
-The website was created to have an eye catch appeal with an emphasis on the content and user experience. The user can navigate easily throughout the site as well as leave comments, delete their comments, and like / unlike posts. The site is easily scalable with the ease to add content via the admin panel.  
+The website was created to have an eye-catching appeal with an emphasis on the content and user experience. The user can navigate easily throughout the site as well as leave comments, delete their comments, and like / unlike posts. The site is easily scalable with the ease of adding content via the admin panel.  
 
 
 ### Target Audience
-This website is intended for for users who are interested in rock, metal, or anything underground in terms of music related journalism.  
+This website is intended for users who are interested in rock, metal, or anything underground in terms of music-related journalism.  
 
 
 ### User Stories
@@ -57,7 +57,7 @@ Accessibility: The site must meet WCAG 2.1 AA standards to ensure it is accessib
 
 - Image Loading and Quality: Images within blog posts must load within 2 seconds and must be optimized for the web without compromising on quality. Images should be displayed at a resolution that looks sharp on both high-density (Retina) and standard displays.
 
-- Interactive Elements Feedback: Interactive elements (e.g., buttons, links, comment submission form) must provide immediate visual feedback when interacted with (e.g., hover or focus states) to indicate their functionality..
+- Interactive Elements Feedback: Interactive elements (e.g., buttons, links, comment submission form) must provide immediate visual feedback when interacted with (e.g., hover or focus states) to indicate their functionality.
 
 - Author Profiles: An overview of the authors on the site
 
@@ -90,14 +90,14 @@ Accessibility: The site must meet WCAG 2.1 AA standards to ensure it is accessib
 ## Future Development
 
 #### Down Votes
-A future feature to add is a "down voting" option as seen on site such as reddit. This would enhance the US for user.
+A future feature to add is a "down-voting" option as seen on sites such as Reddit. This would enhance the US for users.
 
 
 #### Writes: Backend Model for easier updating of Writes
-A future feature to add is a model that can handle the "Meet the Writers" section where writes pictures and overview of them can easily be updated, changed, or reviewed. 
+A future feature to add is a model that can handle the "Meet the Writers" section where pictures of the writers and overviews of them can easily be updated, changed, or reviewed. 
 
 #### Email Verification
-A future feature to add is a more robust email verification mechanism. where user will have to verify their emails by clicking a link that is sent to their email address
+A future feature to add is a more robust email verification mechanism. Where the user will have to verify their emails by clicking a link that is sent to their email address
 
 #### Forgotten Password Authentication
 A future feature to add is the enablement of "Forgotten Passwords." Here a user, or admin staff, could avail of changing their password if they have forgotten it.
@@ -111,14 +111,14 @@ A future feature to add is the "Remember me" option while signing into the site.
 ## Technologies used
 
 ### Languages:
-+ [Python](https://www.python.org/downloads/release/python-385/): The primary language used to develop the server-side of the website.
++ [Python](https://www.python.org/downloads/release/python-385/): The primary language used to develop the server side of the website.
 + [JS](https://www.javascript.com/): The primary language used to develop interactive components of the website.
 + [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): The markup language used to create the website.
 + [CSS](https://developer.mozilla.org/en-US/docs/Web/css): The styling language used to style the website.
 
 ### Frameworks and libraries:
 + [Django](https://www.djangoproject.com/): Python framework used to create all the logic.
-+ [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/): THe style framework used to create the layout of the site.
++ [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/): The style framework used to create the layout of the site.
 
 ### Databases:
 
@@ -130,7 +130,7 @@ A future feature to add is the "Remember me" option while signing into the site.
 + [Pip3](https://pypi.org/project/pip/): This is the package manager used to install the dependencies.
 + [Gunicorn](https://gunicorn.org/): This is the web server used to run the website.
 + [Psycopg2](https://www.psycopg.org/): This is the database driver used to connect to the database.
-+ [Django-allauth](https://django-allauth.readthedocs.io/en/latest/):This is the authentication library used to create the user accounts.
++ [Django-allauth](https://django-allauth.readthedocs.io/en/latest/): This is the authentication library used to create user accounts.
 + [Django-crispy-forms](https://django-cryptography.readthedocs.io/en/latest/): was used to control the rendering behavior of Django forms.
 + [GitHub](https://github.com/): This is used to host the website's source code.
 + [VSCode](https://code.visualstudio.com/): This is the IDE used to develop the website.
@@ -171,7 +171,7 @@ The [Google Fonts](https://fontawesome.com/) font Inconsolata was used to displa
 ## Agile Methodology
 
 ### GitHub Project Management
-GitHub Project Management was used to manage this project. This was used to create issues with GitHub which related to user stories. These User Stories when then imported into Actions and set as a roadmap. This really helped me stay on to of the project and ensure I had a Minimal Viable Product (MVP) at the end of the project
+GitHub Project Management was used to manage this project. This was used to create issues with GitHub which related to user stories. These User Stories when then imported into Actions and set as a roadmap. This helped me stay on top of the project and ensure I had a Minimal Viable Product (MVP) at the end of the project
 
 ![Issues](documentation/issues.png)
 
@@ -195,60 +195,60 @@ GitHub Project Management was used to manage this project. This was used to crea
 ## Testing
 
 ### Python
-#### admin.py
+#### admin.py Pass
 ![admin.py](documentation/admin_linter.png)
 
-#### apps.py 
+#### apps.py Pass
 ![apps.py](documentation/apps_linter.png)
 
-#### env.py
+#### env.py Pass
 ![env.py](documentation/env_linter.png)
 
-#### forms.py
+#### forms.py Pass
 ![forms.py](documentation/forms_linter.png)
 
-#### manage.py
+#### manage.py Pass
 ![manage.py](documentation/manage_linter.png)
 
-#### models.py
+#### models.py Pass
 ![model.py](documentation/models_linter.png)
 
-#### Project urls.py
+#### Project urls.py Pass
 ![project urls.py](documentation/project_urls_linter.png)
 
-#### settings.py
+#### settings.py Pass
 ![settings.py](documentation/settings_linter.png)
 
-#### views.py
+#### views.py Pass
 ![views.py](documentation/views_linter.png)
 
-#### tests.py
+#### tests.py Pass
 ![tests.py](documentation/tests_linter.png)
 
-##### Running tests.py
+##### Running tests.py Fail
 ![Fail](documentation/python_test_fail.png)
 
 ##### Removing the issue
 ![Remove](documentation/python_test_remove.png)
 
-##### Running tests.py with a pass
+##### Running tests.py  Pass
 ![Pass](documentation/python_test_pass.png)
 
 
 ### JavaScript
 
-My JavaScript files are from bootstrap. This is not custom JavaScript. 
+My JavaScript files are from [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/). This is not custom JavaScript. As a result, some errors were present in validating these files. But we were instructed to document and leave them as is.  
 
 ### HTML
-#### Home Page
+#### Home Page Pass
 ![Home Page](documentation/w3_validator_home.png)
-#### Contact Page
+#### Contact Page Pass
 ![Contact Page](documentation/w3_validator_contact.png)
-#### Sign Up Page
+#### Sign Up Page Pass
 ![Signup Page](documentation/w3_validator_signup.png)
-#### Log Out Page
+#### Log Out Page Pass
 ![Log Out Page](documentation/w3_validator_logout.png)
-### CSS
+### CSS Pass
 ![style.css](documentation/css_test.png)
 ---
 
@@ -256,14 +256,31 @@ My JavaScript files are from bootstrap. This is not custom JavaScript.
 
 ## Deployment
 
-Please see the [DEPLOYMENT.md]()
+Please see the [DEPLOYMENT.md](https://github.com/Ajfriel86/brutalgroove/blob/main/DEPLOYMENT.md)
 
 ---
 
 ## Credits
 
+- [GitHub](https://github.com/) for project management.
+- [Django](https://www.djangoproject.com/) for the framework.
+- [Font awesome](https://fontawesome.com/): for the free access to icons.
+- [Heroku](https://dashboard.heroku.com/): for hosting.
+- [ElephantSQL](https://www.elephantsql.com/): for providing the database.
+- [amiresponsive](https://ui.dev/amiresponsive): for the mockup image.
+- [fontawesome](https://fontawesome.com/): for providing the icons.
+- [googlefonts](https://fonts.google.com/): for providing the fonts.
+- [iTech e-Learn](https://www.youtube.com/watch?v=EPzUN97KvNU&list=PLuJZH5pDX4GKrPyVImrii6mZ3kdwAOLvv): for their in-depth Django tutorials.
+- [Pixabay](https://pixabay.com/): for providing the hero images on the carousel.
 
 ### Content and Images
+- [Pitchfork](https://pitchfork.com/reviews/albums/23019-emperor-of-sand/): for their album review of Mastodon Emperor of Sand
+- [Sputnik Music](https://www.sputnikmusic.com/review/81075/Igorrr-Spirituality-and-Distortion/): for their review of Igorrr - Spirituality and Distortion
+- [BlabberMouth.Net](https://blabbermouth.net/news/mastodons-bill-kelliher-how-i-got-sober): for their interview with Bill Kelliher.
+- [Audioxide](https://audioxide.com/reviews/boards-of-canada-music-has-the-right-to-children/): for their review of Boards of Canada's Music has a right to the Children.
+- [Metal Hammer](https://www.loudersound.com/reviews/elder-lore): for their review of Elder Lore.
+- [Pitchfork](https://pitchfork.com/reviews/albums/mastodon-hushed-and-grim/): for their review of Mastodon's Hushed and Grim.
 
 
 ## Acknowledgments
+[Iuliia Konovalova](https://github.com/IuliiaKonovalova): I would like to thank my mentor for constant support throughout this project.
