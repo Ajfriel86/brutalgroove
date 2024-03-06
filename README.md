@@ -140,8 +140,25 @@ A future feature to add is the "Remember me" option while signing into the site.
 ---
 
 ## Features
+### Home Page
+![Home Page](documentation/home.png)
 
+#### Blog Posts on Home Page
+![Blog Posts](documentation/blog.png)
 
+### Contact Page
+![Contact Page](documentation/contact.png)
+
+### Register/Signup Page
+![Register](documentation/reg.png)
+
+### Logout Page
+![Logout Page](documentation/signout.png)
+
+### Custom 404 Page
+![Custom 404](documentation/404.png)
+
+### Custom 500 Page
 
 ---
 ## Design
