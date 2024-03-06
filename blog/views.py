@@ -196,14 +196,28 @@ def custom_error_view(request, error_message=None):
 @login_required
 def comment_edit(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
-    if request.user == comment.author:
-        if request.method == 'POST':
-            form = CommentForm(request.POST, instance=comment)
-            if form.is_valid():
-                form.save()
-                return redirect('post_detail', slug=comment.post.slug)
-        else:
-            form = CommentForm(instance=comment)
-        return render(request, 'comment_edit.html', {'form': form, 'comment': comment})
-    else:
+    if request.user != comment.author:
         return redirect('post_detail', slug=comment.post.slug)
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            return redirect('post_detail', slug=comment.post.slug)
+    else:
+        form = CommentForm(instance=comment)
+
+    post = comment.post
+    comments = post.comments.filter(approved=True).order_by("created_on")
+    liked = post.likes.filter(id=request.user.id).exists()
+
+    context = {
+        'post': post,
+        'comments': comments,
+        'form': form,
+        'commented': False,
+        'liked': liked,
+        'comment_form': CommentForm(),
+    }
+
+    return render(request, 'post_detail.html', context)
