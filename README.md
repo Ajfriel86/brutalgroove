@@ -143,8 +143,14 @@ A future feature to add is the "Remember me" option while signing into the site.
 ### Home Page
 ![Home Page](documentation/home.png)
 
-#### Blog Posts on Home Page
+#### Blog Posts On Home Page
 ![Blog Posts](documentation/blog.png)
+
+#### Approval Message
+![Approval](documentation/approval.png)
+
+#### Comments on Blog Posts (CRUD)
+![Comments](documentation/commented.png)
 
 ### Contact Page
 ![Contact Page](documentation/contact.png)
