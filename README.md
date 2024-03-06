@@ -146,11 +146,20 @@ A future feature to add is the "Remember me" option while signing into the site.
 #### Blog Posts On Home Page
 ![Blog Posts](documentation/blog.png)
 
-#### Approval Message
+### Approval Message
 ![Approval](documentation/approval.png)
 
-#### Comments on Blog Posts (CRUD)
+### Comments on Blog Posts (CRUD)
 ![Comments](documentation/commented.png)
+
+### Edit Posts (CRUD)
+![Edit Posts](documentation/edit.png)
+
+### Delete Posts (CRUD)
+![Delete Posts](documentation/delete_one.png)
+
+### Delete Posts (CRUD)
+![Delete Posts](documentation/delete_two.png)
 
 ### Contact Page
 ![Contact Page](documentation/contact.png)
@@ -165,14 +174,13 @@ A future feature to add is the "Remember me" option while signing into the site.
 ![Custom 404](documentation/404.png)
 
 ### Custom 500 Page
-I have created a custom 500 page but I have not triggered this to capture a screenshot. Below is the code for this to be handled.
-![Custom 500](documentation/500.png)
+![Custom 500](documentation/500_page.png)
 
 ---
 ## Design
 The core design for the website was taken from a [Bootstrap template](https://getbootstrap.com/docs/5.0/examples/carousel/)
 
-- Here I added my own touches to colours & typography
+- Here I added my some touches to the colours & typography
 
 ### Typography
 The [Google Fonts](https://fontawesome.com/) font Inconsolata was used to display text throughout the site. 
@@ -208,7 +216,6 @@ GitHub Project Management was used to manage this project. This was used to crea
 ## Information Architecture
 
 ### Database
-
 
 ### Data Modeling
 ![Data Model](documentation/data_model.png)
@@ -265,7 +272,15 @@ GitHub Project Management was used to manage this project. This was used to crea
 
 ### JavaScript
 
-My JavaScript files are from [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/). This is not custom JavaScript. As a result, some errors were present in validating these files. But we were instructed to document and leave them as is.  
+My main JavaScript files are from [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/). This is not custom JavaScript. As a result, some errors were present in validating these files. But we were instructed to document and leave them as is.  
+
+There is embedded JavaScript within the Contact form and the test results are:
+
+![Contact JS](documentation/contact_js.png)
+
+There is also embedded JavaScript in the post_detail page for handling deleting and editing of posts.
+
+![Posts JS](documentation/js_val.png)
 
 ### HTML
 #### Home Page Pass
