@@ -165,6 +165,8 @@ A future feature to add is the "Remember me" option while signing into the site.
 ![Custom 404](documentation/404.png)
 
 ### Custom 500 Page
+I have created a custom 500 page but I have not triggered this to capture a screenshot. Below is the code for this to be handled.
+![Custom 500](documentation/500.png)
 
 ---
 ## Design
@@ -174,7 +176,7 @@ The core design for the website was taken from a [Bootstrap template](https://ge
 
 ### Typography
 The [Google Fonts](https://fontawesome.com/) font Inconsolata was used to display text throughout the site. 
-
+![Inconsolata](documentation/type.png)
 
 ### Wireframes
 #### Home Page
@@ -210,8 +212,11 @@ GitHub Project Management was used to manage this project. This was used to crea
 
 ### Data Modeling
 ![Data Model](documentation/data_model.png)
+
 ![Data Model](documentation/data_model_two.png)
 
+### Data Schema
+![Data](documentation/data.png)
 
 
 ---
