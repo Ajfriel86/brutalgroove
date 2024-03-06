@@ -164,8 +164,14 @@ A future feature to add is the "Remember me" option while signing into the site.
 ### Contact Page
 ![Contact Page](documentation/contact.png)
 
+### Contact Success Page
+![Contact Success](documentation/contact_success.png)
+
 ### Register/Signup Page
 ![Register](documentation/reg.png)
+
+### Register Success Page
+![Register Successful](documentation/reg_success.png)
 
 ### Logout Page
 ![Logout Page](documentation/signout.png)
