@@ -1,0 +1,12 @@
+<!-- Inherits from the base template to maintain a consistent layout across the site -->
+{% extends "base.html" %}
+<!-- Content block where the specific page content will be inserted -->
+{% block content %}
+<div class="container-success">
+        <div class="reg-page">
+            <p>Thank You For Contact us</p>
+            <p>A member of our team will reach out in due course</p>
+            <a href="{% url 'home' %}">Return to home page</a>
+        </div>
+</div>
+{% endblock %}
