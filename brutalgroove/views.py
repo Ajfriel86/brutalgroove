@@ -13,4 +13,4 @@ def handler500(request):
         1/0
         return render(request, "errors/500.html", status=500)
     except Exception:
-        raise HttpResponseServerError("Internal Server Error")
+        raise HttpResponseServerError("errors/500.html", status=500)
