@@ -129,16 +129,26 @@ class PostLike(View):
 
 
 def contact_view(request):
+    """
+    View to handle contact form functionality
+    """
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(
-                request, 'A member of our team will reach out in due course.')
-            return redirect('registration_success')
+                request, 'Your message has been sent successfully!')
+            return redirect('contact_success')
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})
+
+
+def contact_success_view(request):
+    """_
+    view to display the contact_success page
+    """
+    return render(request, 'contact_success.html')
 
 
 class CustomSignupForm(SignupForm):
